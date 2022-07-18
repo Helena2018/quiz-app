@@ -41,3 +41,17 @@ const b_text = document.getElementById('b_text')
 const c_text = document.getElementById('c_text')
 const d_text = document.getElementById('d_text')
 
+let currentQuiz = 0
+let score = 0
+
+function loadQuiz() {
+  const currentQuizData = quizData[currentQuiz]
+  console.log(currentQuizData)
+  if(currentQuiz < quizData.length + 1) {
+    questionEl.innerHTML = currentQuizData.question
+    currentQuiz++
+  }
+  
+}
+
+loadQuiz()
